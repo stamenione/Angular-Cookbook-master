@@ -16,5 +16,11 @@
       "es2018",
       "dom"
     ]
+  },
+  "angularCompilerOptions": {
+    "strictInputTypes": true,
+    "strictNullChecks": true,
+    "strictNullInputTypes": true,
+    "strictTemplates": true
   }
 }
