@@ -6,6 +6,25 @@ export const ANIMATIONS = {
       width: 120,
       transform: 'translateX(0)', opacity: 1
     })),
+    state('hovered', style({
+      transform: 'scale3d(1.05,1.05,1.05)',
+      backgroundColor: '#333',
+      color: 'white'
+    })),
+    transition('active => hovered', [
+      animate('0.3s 0s ease-out', style({
+        transform: 'scale3d(1.05, 1.05, 1.05)',
+        backgroundColor: '#333',
+        color: 'white'
+      }))
+    ]),
+    transition('hovered => active', [
+      animate('0.3s 0s ease-out', style({
+        transform: 'scale3d(1, 1, 1)',
+        backgroundColor: 'white',
+        color: 'rgb(51, 51, 51)'
+      }))
+    ]),
     transition('void => *', [
       style({ width: 10, transform: 'translateX(50px)', opacity: 0 }),
       group([
